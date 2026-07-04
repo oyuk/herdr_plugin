@@ -7,7 +7,7 @@
 | Action | 説明 |
 |---|---|
 | `jump` | ステータスが `done` の最初のエージェントにジャンプ |
-| `jump_idle` | ステータスが `idle` の最初のエージェントにジャンプ |
+| `jump_not_done` | ステータスが `done` 以外の最初のエージェントにジャンプ |
 
 ## Requirements
 
@@ -32,8 +32,8 @@ command = "<plugin_id>.jump"
 description = "jump to done agent"
 
 [[keys.command]]
-key = "prefix+i"
+key = "prefix+n"
 type = "plugin_action"
-command = "<plugin_id>.jump_idle"
-description = "jump to idle agent"
+command = "<plugin_id>.jump_not_done"
+description = "jump to not done agent"
 ```
