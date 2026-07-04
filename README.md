@@ -32,7 +32,7 @@ command = "<plugin_id>.jump"
 description = "jump to done agent"
 
 [[keys.command]]
-key = "prefix+n"
+key = "prefix+o"
 type = "plugin_action"
 command = "<plugin_id>.jump_not_done"
 description = "jump to not done agent"
