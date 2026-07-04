@@ -12,7 +12,7 @@ contexts = ["pane", "workspace", "tab"]
 command = ["bash", "jump.sh"]
 
 [[actions]]
-id = "jump_idle"
-title = "Jump to Idle"
+id = "jump_not_done"
+title = "Jump to Not Done"
 contexts = ["pane", "workspace", "tab"]
-command = ["bash", "jump_idle.sh"]
+command = ["bash", "jump_not_done.sh"]
