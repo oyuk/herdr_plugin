@@ -12,7 +12,7 @@ TARGET=$("$HERDR_BIN_PATH" agent list | jq -r '
     end
   end
 ')
-echo "TARGET: $TARGET" >> /tmp/jump_plugin.log
+
 
 
 if [ -n "$TARGET" ]; then
