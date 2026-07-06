@@ -6,7 +6,7 @@
 
 | Action | 説明 |
 |---|---|
-| `jump` | ステータスが `done` の最初のエージェントにジャンプ |
+| `jump_done` | ステータスが `done` の最初のエージェントにジャンプ |
 | `jump_idle` | ステータスが `idle` の最初のエージェントにジャンプ |
 | `jump_blocked` | ステータスが `blocked` の最初のエージェントにジャンプ |
 | `jump_not_done` | ステータスが `done` 以外の最初のエージェントにジャンプ |
@@ -19,7 +19,7 @@
 ## Install
 
 ```sh
-herdr plugin install <owner>/herdr_plugin
+herdr plugin install oyuk/herdr_plugin
 ```
 
 ## Keybinding
@@ -30,7 +30,7 @@ herdr plugin install <owner>/herdr_plugin
 [[keys.command]]
 key = "prefix+d"
 type = "plugin_action"
-command = "<plugin_id>.jump"
+command = "<plugin_id>.jump_done"
 description = "jump to done agent"
 
 [[keys.command]]

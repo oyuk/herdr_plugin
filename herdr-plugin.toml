@@ -1,12 +1,12 @@
 id = "jump-to-agent"
 name = "Jump to Agent"
-version = "0.2.0"
+version = "0.3.0"
 min_herdr_version = "0.7.0"
 description = "Jump to agents by status"
 platforms = ["macos"]
 
 [[actions]]
-id = "jump"
+id = "jump_done"
 title = "Jump to Done"
 contexts = ["pane", "workspace", "tab"]
 command = ["bash", "jump.sh"]
