@@ -1,8 +1,8 @@
 id = "jump-to-agent"
 name = "Jump to Agent"
-version = "0.1.0"
+version = "0.2.0"
 min_herdr_version = "0.7.0"
-description = "Jump to the first done/idle agent"
+description = "Jump to agents by status"
 platforms = ["macos"]
 
 [[actions]]
@@ -10,6 +10,20 @@ id = "jump"
 title = "Jump to Done"
 contexts = ["pane", "workspace", "tab"]
 command = ["bash", "jump.sh"]
+
+[[actions]]
+id = "jump_idle"
+title = "Jump to Idle"
+contexts = ["pane", "workspace", "tab"]
+command = ["bash", "jump_idle.sh"]
+
+# Recommended keybinding is prefix+b. This intentionally overrides Herdr's
+# default toggle_sidebar binding when configured by the user.
+[[actions]]
+id = "jump_blocked"
+title = "Jump to Blocked"
+contexts = ["pane", "workspace", "tab"]
+command = ["bash", "jump_blocked.sh"]
 
 [[actions]]
 id = "jump_not_done"

@@ -7,6 +7,8 @@
 | Action | 説明 |
 |---|---|
 | `jump` | ステータスが `done` の最初のエージェントにジャンプ |
+| `jump_idle` | ステータスが `idle` の最初のエージェントにジャンプ |
+| `jump_blocked` | ステータスが `blocked` の最初のエージェントにジャンプ |
 | `jump_not_done` | ステータスが `done` 以外の最初のエージェントにジャンプ |
 
 ## Requirements
@@ -32,8 +34,16 @@ command = "<plugin_id>.jump"
 description = "jump to done agent"
 
 [[keys.command]]
-key = "prefix+o"
+key = "prefix+i"
 type = "plugin_action"
-command = "<plugin_id>.jump_not_done"
-description = "jump to not done agent"
+command = "<plugin_id>.jump_idle"
+description = "jump to idle agent"
+
+# Intentionally overrides Herdr's default prefix+b toggle_sidebar binding.
+# Sidebar toggle is unused here; prefix+b is reserved for blocked agents.
+[[keys.command]]
+key = "prefix+b"
+type = "plugin_action"
+command = "<plugin_id>.jump_blocked"
+description = "jump to blocked agent"
 ```
